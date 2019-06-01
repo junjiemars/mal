@@ -28,12 +28,12 @@ ifeq (,$(USE_READLINE))
 RL_LIBRARY ?= edit
 else
 RL_LIBRARY ?= readline
-CFLAGS += -DUSE_READLINE=1
+CFLAGS += -DUSE_READLINE=$(USE_READLINE)
 endif
 
 ifeq (,$(USE_GC))
 else
-CFLAGS += -DUSE_GC=1
+CFLAGS += -DUSE_GC=$(USE_GC)
 LDFLAGS += -lgc
 endif
 
